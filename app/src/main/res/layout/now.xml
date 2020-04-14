@@ -33,6 +33,16 @@
 
     </FrameLayout>
 
+    <TextView
+        android:id="@+id/placeAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:gravity="center_horizontal"
+        android:text="湖南省常德市鼎城区"
+        android:textColor="#9EFFFFFF"
+        android:textSize="12sp" />
+
     <LinearLayout
         android:id="@+id/bodyLayout"
         android:layout_width="match_parent"

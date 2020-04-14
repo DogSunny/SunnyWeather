@@ -27,6 +27,7 @@ class PlaceFragment : Fragment(R.layout.fragment_place) {
                 putExtra("location_lng", place.location.lng)
                 putExtra("location_lat", place.location.lat)
                 putExtra("place_name", place.name)
+                putExtra("place_address", place.address)
             }
             startActivity(intent)
             activity?.finish()

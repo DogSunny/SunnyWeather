@@ -47,6 +47,9 @@ class WeatherActivity : AppCompatActivity() {
         if (viewModel.placeName.isEmpty()) {
             viewModel.placeName = intent.getStringExtra("place_name") ?: ""
         }
+        if (viewModel.placeAddress.isEmpty()) {
+            viewModel.placeAddress = intent.getStringExtra("place_address") ?: ""
+        }
         viewModel.weatherLiveData.observe(this, Observer { result ->
             val weather = result.getOrNull()
 
@@ -90,6 +93,7 @@ class WeatherActivity : AppCompatActivity() {
 
     private fun showWeatherInfo(weather: Weather) {
         placeName.text = viewModel.placeName
+        placeAddress.text = viewModel.placeAddress
 
         val (realtime, daily) = weather
         val currentTempText = "${realtime.temperature.toInt()} °C"

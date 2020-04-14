@@ -29,6 +29,7 @@ class PlaceAdapter(private val fragment: PlaceFragment, private val placeList: L
                 activity.viewModel.locationLng = place.location.lng
                 activity.viewModel.locationLng = place.location.lat
                 activity.viewModel.placeName = place.name
+                activity.viewModel.placeAddress = place.address
 
                 activity.refreshWeather()
             }
@@ -37,6 +38,7 @@ class PlaceAdapter(private val fragment: PlaceFragment, private val placeList: L
                     putExtra("location_lng", place.location.lng)
                     putExtra("location_lat", place.location.lat)
                     putExtra("place_name", place.name)
+                    putExtra("place_address", place.address)
                 }
                 fragment.startActivity(intent)
                 activity?.finish()
